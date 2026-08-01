@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CozyMind — Deux minutes chaque soir pour votre humeur</title>
-  <meta name="description" content="CozyMind est une app iPhone de suivi d'humeur : un petit rituel du soir, tout doux. Sans compte, sans serveur, sans pub — tout reste sur votre téléphone.">
+  <meta name="description" content="CozyMind est une app iPhone de suivi d’humeur : un petit rituel du soir, tout doux. Sans compte, sans serveur, sans pub — tout reste sur votre téléphone.">
   <link rel="canonical" href="https://cozymind.fr/">
   <meta property="og:title" content="CozyMind — Deux minutes chaque soir pour votre humeur">
   <meta property="og:description" content="Un petit rituel du soir pour noter votre humeur. Sans compte, sans serveur : tout reste sur votre iPhone.">
@@ -14,9 +14,12 @@
   <meta name="theme-color" content="#FAF6F0">
   <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
 
   <header class="site-header">
     <div class="wrap">
@@ -24,23 +27,23 @@
         <img src="assets/img/app-icon.webp" alt="" width="38" height="38">
         CozyMind
       </a>
-      <span class="header-note">Bientôt sur l'App Store</span>
+      <span class="header-note">Bientôt sur l’App Store</span>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
       <div class="wrap">
         <div class="hero-copy">
-          <h1>Comment ça va, <em>aujourd'hui</em>&nbsp;?</h1>
+          <h1>Comment ça va, <em>aujourd’hui</em>&nbsp;?</h1>
           <p class="pitch">CozyMind est un petit rituel du soir&nbsp;: deux minutes pour noter votre humeur, poser vos émotions et regarder, semaine après semaine, le ciel se dégager.</p>
           <div class="cta-row">
-            <span class="badge-soon"><span class="dot" aria-hidden="true"></span>Bientôt sur l'App&nbsp;Store</span>
+            <span class="badge-soon"><span class="dot" aria-hidden="true"></span>Bientôt sur l’App&nbsp;Store</span>
           </div>
           <p class="cta-note">Pour iPhone · Gratuit, avec option Premium</p>
         </div>
         <figure class="hero-figure">
-          <img src="assets/img/mascotte.webp" alt="La mascotte de CozyMind, un petit nuage souriant aux joues rosées" width="880" height="687">
+          <img src="assets/img/mascotte.webp" alt="La mascotte de CozyMind, un petit nuage souriant aux joues rosées" width="880" height="687" fetchpriority="high">
         </figure>
       </div>
     </section>
@@ -52,15 +55,18 @@
         <article class="feature">
           <div class="feature-text">
             <h3>Deux minutes, cinq visages</h3>
-            <p>Chaque soir, choisissez le visage qui vous ressemble, l'émotion qui l'accompagne, et ajoutez quelques mots si le cœur vous en dit. C'est tout, et c'est déjà beaucoup.</p>
+            <p>Chaque soir, choisissez le visage qui vous ressemble, l’émotion qui l’accompagne, et ajoutez quelques mots si le cœur vous en dit. C’est tout, et c’est déjà beaucoup.</p>
           </div>
           <figure class="feature-visual">
-            <div class="mood-fan" role="img" aria-label="Les cinq visages d'humeur de CozyMind, de « pas très bien » à « très bien »">
-              <img src="assets/img/humeur-1.webp" alt="" width="256" height="256">
-              <img src="assets/img/humeur-2.webp" alt="" width="256" height="256">
-              <img src="assets/img/humeur-3.webp" alt="" width="256" height="256">
-              <img src="assets/img/humeur-4.webp" alt="" width="256" height="256">
-              <img src="assets/img/humeur-5.webp" alt="" width="256" height="256">
+            <div>
+              <div class="mood-fan">
+                <button type="button" aria-pressed="false" aria-label="Pas très bien"><img src="assets/img/humeur-1.webp" alt="" width="256" height="256" loading="lazy"></button>
+                <button type="button" aria-pressed="false" aria-label="Bof"><img src="assets/img/humeur-2.webp" alt="" width="256" height="256" loading="lazy"></button>
+                <button type="button" aria-pressed="false" aria-label="Moyen"><img src="assets/img/humeur-3.webp" alt="" width="256" height="256" loading="lazy"></button>
+                <button type="button" aria-pressed="false" aria-label="Bien"><img src="assets/img/humeur-4.webp" alt="" width="256" height="256" loading="lazy"></button>
+                <button type="button" aria-pressed="false" aria-label="Très bien"><img src="assets/img/humeur-5.webp" alt="" width="256" height="256" loading="lazy"></button>
+              </div>
+              <p class="mood-try" aria-live="polite">Touchez un visage&nbsp;: c’est exactement le geste de l’app.</p>
             </div>
           </figure>
         </article>
@@ -68,10 +74,10 @@
         <article class="feature">
           <div class="feature-text">
             <h3>Votre ciel de la semaine</h3>
-            <p>Jour après jour, vos humeurs dessinent une météo intérieure. Un coup d'œil suffit pour voir d'où vous venez, sans note, sans score, sans jugement.</p>
+            <p>Jour après jour, vos humeurs dessinent une météo intérieure. Un coup d’œil suffit pour voir d’où vous venez, sans note, sans score, sans jugement.</p>
           </div>
           <figure class="feature-visual">
-            <div class="week-card" role="img" aria-label="Aperçu de la semaine dans CozyMind : un rond coloré par jour selon l'humeur">
+            <div class="week-card" role="img" aria-label="Aperçu de la semaine dans CozyMind : un rond coloré par jour selon l’humeur">
               <p class="week-title">Ta semaine</p>
               <div class="week-days">
                 <span class="day"><span>L</span><i class="m4"></i></span>
@@ -89,13 +95,13 @@
         <article class="feature">
           <div class="feature-text">
             <h3>Un rappel doux, jamais insistant</h3>
-            <p>À l'heure que vous choisissez, votre téléphone vous fait un petit signe. Le rappel est programmé localement, sur votre appareil, et aucun serveur ne vous surveille.</p>
+            <p>À l’heure que vous choisissez, votre téléphone vous fait un petit signe. Le rappel est programmé localement, sur votre appareil, et aucun serveur ne vous surveille.</p>
           </div>
           <figure class="feature-visual">
             <div class="reminder-stack">
-              <img src="assets/img/mascotte-festive.webp" alt="La mascotte de CozyMind qui lance des confettis" width="640" height="567">
+              <img src="assets/img/mascotte-festive.webp" alt="La mascotte de CozyMind qui lance des confettis" width="640" height="567" loading="lazy">
               <div class="notif-card">
-                <img src="assets/img/app-icon.webp" alt="" width="42" height="42">
+                <img src="assets/img/app-icon.webp" alt="" width="42" height="42" loading="lazy">
                 <div>
                   <p class="notif-app">COZYMIND · maintenant</p>
                   <p class="notif-text">Un petit moment pour vous&nbsp;? Deux minutes pour poser la journée.</p>
@@ -111,7 +117,7 @@
     <section class="privacy">
       <div class="wrap">
         <h2>Tout reste sur votre iPhone.</h2>
-        <p class="privacy-lead">CozyMind n'a ni compte, ni serveur. Vos humeurs, vos émotions et vos notes ne quittent jamais votre téléphone&nbsp;: personne d'autre que vous ne peut les lire — pas même nous.</p>
+        <p class="privacy-lead">CozyMind n’a ni compte, ni serveur. Vos humeurs, vos émotions et vos notes ne quittent jamais votre téléphone&nbsp;: personne d’autre que vous ne peut les lire — pas même nous.</p>
         <ul class="privacy-facts">
           <li>Aucun compte</li>
           <li>Aucun serveur</li>
@@ -124,11 +130,11 @@
 
     <section class="closing">
       <div class="wrap">
-        <img src="assets/img/nuage-heureux.webp" alt="Un nuage heureux, les yeux fermés, tout sourire" width="880" height="722">
+        <img src="assets/img/nuage-heureux.webp" alt="Un nuage heureux, les yeux fermés, tout sourire" width="880" height="722" loading="lazy">
         <h2>Bientôt dans votre poche</h2>
-        <p class="pitch">CozyMind arrive sur l'App&nbsp;Store. En attendant, prenez soin de vous.</p>
+        <p class="pitch">CozyMind arrive sur l’App&nbsp;Store. En attendant, prenez soin de vous.</p>
         <div class="cta-row">
-          <span class="badge-soon"><span class="dot" aria-hidden="true"></span>Bientôt sur l'App&nbsp;Store</span>
+          <span class="badge-soon"><span class="dot" aria-hidden="true"></span>Bientôt sur l’App&nbsp;Store</span>
         </div>
       </div>
     </section>
@@ -142,12 +148,37 @@
       </a>
       <ul class="footer-links">
         <li><a href="confidentialite.html">Politique de confidentialité</a></li>
-        <li><a href="conditions.html">Conditions d'utilisation</a></li>
+        <li><a href="conditions.html">Conditions d’utilisation</a></li>
         <li><a href="mailto:support@cozymind.fr">support@cozymind.fr</a></li>
       </ul>
       <p class="legal">© 2026 SND CAPITAL — CozyMind. Un site fait avec soin, sans aucun traqueur.</p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var moods = [
+        { label: 'Pas très bien', note: 'ça compte aussi.', bg: '#E89078', text: '#6E2F1D' },
+        { label: 'Bof', note: 'merci d’être honnête.', bg: '#F2B872', text: '#6E4E14' },
+        { label: 'Moyen', note: 'on prend note, en douceur.', bg: '#D6CDBB', text: '#5F5347' },
+        { label: 'Bien', note: 'belle journée, on dirait.', bg: '#A9D178', text: '#3E5A1E' },
+        { label: 'Très bien', note: 'on s’en réjouit avec vous.', bg: '#5DBE93', text: '#1C4F38' }
+      ];
+      var fan = document.querySelector('.mood-fan');
+      var out = document.querySelector('.mood-try');
+      if (!fan || !out) return;
+      var buttons = fan.querySelectorAll('button');
+      buttons.forEach(function (btn, i) {
+        btn.addEventListener('click', function () {
+          fan.classList.add('has-choice');
+          buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+          var m = moods[i];
+          out.innerHTML = '<span class="mood-chip" style="background:' + m.bg + ';color:' + m.text + '">'
+            + m.label + '</span> ' + m.note;
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
