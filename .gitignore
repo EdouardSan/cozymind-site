@@ -1,0 +1,14 @@
+# Sécurité : ce dépôt est PUBLIC — jamais de clés ni de secrets ici
+.ssh/
+cozymind_keys/
+*.p8
+*.p12
+*.pem
+*.key
+*.jks
+*.mobileprovision
+.env
+.env.*
+
+# Système / éditeurs
+.DS_Store
